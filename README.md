@@ -1,6 +1,6 @@
 # Event Store Cluster Node Docker Container
 
-This docker image is WIP.
+The docker image will be available via the [Docker Hub Event Store Repository](https://hub.docker.com/r/krnissbrandt/eventstore-cluster-node-docker/)
 
 ### Getting Started ###
 
