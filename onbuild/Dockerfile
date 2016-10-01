@@ -27,6 +27,5 @@ ONBUILD VOLUME /data/db
 ONBUILD VOLUME /data/logs
 
 COPY eventstore.conf /etc/eventstore/
-COPY entrypoint.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["exec eventstored"]
