@@ -1,7 +1,9 @@
 FROM ubuntu:14.04.3
-MAINTAINER Event Store LLP <ops@geteventstore.com>
+MAINTAINER Kristofer Nissbrandt <nissbran@gmail.com>
 
-ENV ES_VERSION=3.8.1
+## INSTALLATION START ##
+
+ENV ES_VERSION=3.9.1
 
 RUN apt-get update && apt-get install curl -y &&\
     curl -s https://packagecloud.io/install/repositories/EventStore/EventStore-OSS/script.deb.sh | bash &&\
@@ -9,10 +11,20 @@ RUN apt-get update && apt-get install curl -y &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+## INSTALLATION ENDS ##
+
+## INTERNAL CLUSTER PORTS ##
+
+EXPOSE 1112
+EXPOSE 2112
+
+## EXTERNAL CLUSTER PORTS ##
+
 EXPOSE 1113
 EXPOSE 2113
 
-ONBUILD VOLUME /var/lib/eventstore
+ONBUILD VOLUME /data/db
+ONBUILD VOLUME /data/logs
 
 COPY eventstore.conf /etc/eventstore/
 COPY entrypoint.sh /
