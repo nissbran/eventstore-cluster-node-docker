@@ -28,4 +28,4 @@ VOLUME /data/logs
 
 COPY eventstore.conf /etc/eventstore/
 
-CMD ["exec eventstored"]
+ENTRYPOINT ["eventstored"]
