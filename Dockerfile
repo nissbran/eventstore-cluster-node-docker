@@ -25,6 +25,7 @@ EXPOSE 2113
 
 VOLUME /data/db
 VOLUME /data/logs
+VOLUME /certs
 
 COPY eventstore.conf /etc/eventstore/
 

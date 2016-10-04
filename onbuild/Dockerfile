@@ -25,6 +25,7 @@ EXPOSE 2113
 
 ONBUILD VOLUME /data/db
 ONBUILD VOLUME /data/logs
+ONBUILD VOLUME /certs
 
 COPY eventstore.conf /etc/eventstore/
 
