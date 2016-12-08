@@ -3,7 +3,7 @@ MAINTAINER Kristofer Nissbrandt <nissbran@gmail.com>
 
 ## INSTALLATION START ##
 
-ENV ES_VERSION=3.9.2
+ENV ES_VERSION=3.9.3
 
 RUN apt-get update && apt-get install curl -y &&\
     curl -s https://packagecloud.io/install/repositories/EventStore/EventStore-OSS/script.deb.sh | bash &&\
