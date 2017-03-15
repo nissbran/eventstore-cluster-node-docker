@@ -3,7 +3,7 @@ MAINTAINER Kristofer Nissbrandt <nissbran@gmail.com>
 
 ## INSTALLATION START ##
 
-ENV ES_VERSION=4.0.0-rc1
+ENV ES_VERSION=4.0.0-rc2
 
 RUN apt-get update && apt-get install curl -y &&\
     curl -s https://packagecloud.io/install/repositories/EventStore/EventStore-OSS-PreRelease/script.deb.sh | bash &&\
